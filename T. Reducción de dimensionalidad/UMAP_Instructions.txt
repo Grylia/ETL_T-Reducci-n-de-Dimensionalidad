@@ -1,0 +1,58 @@
+Paso a Paso para Implementar el Código de UMAP
+
+1. **Instalar Dependencias**:
+   Asegúrate de tener instaladas las bibliotecas necesarias. Puedes instalarlas usando pip:
+
+   ```bash
+   pip install Flask pandas umap-learn scikit-learn
+   ```
+
+2. **Crear el Archivo de Script**:
+   - Abre un editor de texto (como Visual Studio Code, PyCharm, o incluso un bloc de notas).
+   - Crea un nuevo archivo llamado, por ejemplo, `umap_app.py`.
+   - Copia y pega el código proporcionado en este archivo.
+
+3. **Preparar tu Dataset**:
+   - Asegúrate de que el archivo `phone search.csv` esté en la misma carpeta donde guardaste `umap_app.py`.
+
+4. **Ejecutar la API**:
+   - Abre una terminal o consola.
+   - Navega hasta la carpeta donde guardaste el archivo.
+   - Ejecuta el script:
+
+   ```bash
+   python umap_app.py
+   ```
+
+5. **Acceder a la API**:
+   - Una vez que la API esté en funcionamiento, abrirás un navegador web o una herramienta como Postman.
+   - Ve a la siguiente URL para acceder a la ruta que aplica UMAP:
+
+   ```
+   http://127.0.0.1:5000/api/umap
+   ```
+
+   Esto devolverá un JSON con los resultados de UMAP, que contendrá los componentes principales generados por la técnica.
+
+6. **Probar el Funcionamiento**:
+   - Deberías recibir una respuesta con los datos transformados. Si hay un error, asegúrate de que `phone search.csv` contenga columnas numéricas.
+
+7. **Subir a GitHub**:
+   - Crea un nuevo repositorio en tu cuenta de GitHub.
+   - Sigue los pasos que hemos discutido anteriormente para subir tu código:
+     1. Clona el repositorio del docente.
+     2. Agrega tu archivo `umap_app.py` y el CSV.
+     3. Haz un commit con un mensaje descriptivo.
+     4. Haz un push al repositorio.
+     5. Crea un Pull Request.
+
+Ejemplo de Mensaje de Commit:
+Cuando hagas el commit de tus cambios, utiliza un mensaje descriptivo como:
+
+```bash
+git commit -m "Implementación de UMAP para reducción de dimensionalidad"
+```
+
+Consideraciones Finales:
+- Asegúrate de que tu archivo `phone search.csv` tenga columnas con datos numéricos, ya que UMAP solo puede aplicarse a esos tipos de datos.
+- Puedes experimentar con diferentes parámetros de UMAP, como `n_neighbors` y `min_dist`, para ajustar el comportamiento del modelo según tus necesidades.
